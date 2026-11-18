@@ -1,8 +1,22 @@
 <?php
 
+$nome = 'Eliel Dias';
 $email = 'eliel@alura.com.br';
+$senha = 'áéiaosid';
 
-$posicaoDoArroba = strpos($email, '@');
+echo mb_strlen($senha) . PHP_EOL;
 
-echo substr($email, 0, 5) . PHP_EOL;
-echo substr($email, $posicaoDoArroba + 1) .  PHP_EOL;
+if (mb_strlen($senha) < 8) {
+    echo 'Senha insergura' . PHP_EOL;
+}
+
+$posicaoDoArroba = strpos($email, '@',);
+$usuario = substr($email, 0, $posicaoDoArroba);
+
+echo mb_strtoupper($usuario);
+echo substr($email, $posicaoDoArroba + 1) . PHP_EOL;
+
+list($nome, $sobrenome) = explode(' ', $nome);
+
+echo 'Nome: ' . $nome . PHP_EOL;
+echo 'Sobrenome: ' . $sobrenome . PHP_EOL;
